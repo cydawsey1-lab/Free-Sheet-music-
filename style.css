@@ -18,15 +18,29 @@ h1 {
   text-align: center;
 }
 
-/* DESKTOP - 4 across */
+
+/* SHEET MUSIC GRID */
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Keep the title and footer full width */
+.wrap h1,
+.wrap > p,
+.wrap footer {
+  grid-column: 1 / -1;
+}
+
+
+/* SHEET MUSIC CARDS */
 .card {
-  width: 23%;
-  display: inline-block;
-  vertical-align: top;
-  margin: 1%;
-  box-sizing: border-box;
+  width: auto;
+  margin: 0;
   background: white;
   padding: 15px;
+  box-sizing: border-box;
   border-radius: 8px;
 }
 
@@ -50,72 +64,32 @@ h1 {
 
 footer {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 
-/* TABLET - 2 across */
-@media (max-width: 900px) {
+/* TABLET */
+@media (max-width: 800px) {
   .wrap {
-    padding: 15px;
-  }
-
-  .card {
-    width: 47%;
-    margin: 1.5%;
-  }
-
-  .card h2 {
-    font-size: 16px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 
-/* PHONE - 2 across */
-@media (max-width: 600px) {
+/* PHONE */
+@media (max-width: 500px) {
   .wrap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     padding: 10px;
   }
 
-  h1 {
-    font-size: 26px;
-  }
-
   .card {
-    width: 47%;
-    margin: 1.5%;
-    padding: 10px;
-  }
-
-  .card h2 {
-    font-size: 14px;
-    margin: 5px 0 10px 0;
-  }
-
-  .btn {
-    font-size: 12px;
-    padding: 8px 10px;
-  }
-}
-
-
-/* SMALL PHONE */
-@media (max-width: 400px) {
-  .wrap {
-    padding: 5px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  .card {
-    width: 47%;
     padding: 8px;
   }
 
   .card h2 {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .btn {

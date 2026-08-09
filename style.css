@@ -18,6 +18,7 @@ h1 {
   text-align: center;
 }
 
+/* DESKTOP - 4 across */
 .card {
   width: 23%;
   display: inline-block;
@@ -52,14 +53,73 @@ footer {
   margin-top: 30px;
 }
 
-@media (max-width: 800px) {
+
+/* TABLET - 2 across */
+@media (max-width: 900px) {
+  .wrap {
+    padding: 15px;
+  }
+
   .card {
     width: 47%;
+    margin: 1.5%;
+  }
+
+  .card h2 {
+    font-size: 16px;
   }
 }
 
-@media (max-width: 500px) {
+
+/* PHONE - 2 across */
+@media (max-width: 600px) {
+  .wrap {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
   .card {
-    width: 100%;
+    width: 47%;
+    margin: 1.5%;
+    padding: 10px;
+  }
+
+  .card h2 {
+    font-size: 14px;
+    margin: 5px 0 10px 0;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+
+/* SMALL PHONE */
+@media (max-width: 400px) {
+  .wrap {
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .card {
+    width: 47%;
+    padding: 8px;
+  }
+
+  .card h2 {
+    font-size: 13px;
+  }
+
+  .btn {
+    font-size: 11px;
+    padding: 7px 8px;
   }
 }

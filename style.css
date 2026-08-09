@@ -7,3 +7,30 @@ body{font-family:Arial,sans-serif;background:#f7f7f7;margin:0}.wrap{max-width:70
     margin-top:15px;
     box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
+.wrap {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  display: inline-block;
+  width: 22%;
+  margin: 1%;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.preview {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 800px) {
+  .card {
+    width: 47%;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
